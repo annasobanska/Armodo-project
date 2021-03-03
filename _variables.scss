@@ -1,0 +1,16 @@
+//Colors
+
+$text-color: #231F20;
+$font-family: "Cabin", Arial, sans-serif;
+
+//Mixins
+
+@mixin flex-center($direction, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: $align;
+}
+
+
+
