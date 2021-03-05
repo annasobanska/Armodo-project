@@ -252,6 +252,8 @@ body {
           align-items: center;
   background-color: #231F20;
   color: white;
+  list-style-type: none;
+  padding: 20px;
   text-align: center;
 }
 
@@ -273,24 +275,15 @@ body {
   }
 }
 
-.footer-menu__column {
-  margin-top: 30px;
-}
-
-@media (min-width: 980px) {
-  .footer-menu__column {
-    margin: 30px 50px;
-  }
-}
-
 .footer-menu__list {
   list-style-type: none;
-  margin: 10px;
 }
 
 .footer-menu__title {
   color: white;
+  display: block;
   font-size: 1rem;
+  padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -298,8 +291,8 @@ body {
 .footer-menu__item {
   color: white;
   display: block;
-  font-size: 0.75rem;
   padding: 10px;
+  font-size: 0.75rem;
   text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
