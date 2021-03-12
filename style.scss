@@ -113,3 +113,17 @@ body{
     }
 }
 
+.footer-info {
+    display: none;
+    @media(min-width: $width-desktop){
+        @include flex-center(row, center);
+        font-weight: 500;
+        justify-content: left; //make new mixin
+        padding: 20px;
+        margin-left: 250px;
+    }
+    &__phone, &__email, &__face {
+        margin: 5px;
+    }
+}
+
