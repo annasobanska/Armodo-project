@@ -247,11 +247,58 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px;
+}
+
+@media (min-width: 980px) {
+  .header__nav-bar {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+@media (min-width: 980px) {
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__logo-icon {
+  width: 80%;
 }
 
 .header__search-bar {
@@ -260,7 +307,78 @@ body {
 
 @media (min-width: 980px) {
   .header__search-bar {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__search {
+  border: 0;
+  border-bottom: 1px solid #231F20;
+  width: 20vw;
+}
+
+.header__search-icon {
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.header__icons-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+@media (min-width: 980px) {
+  .header__icons-bar {
+    display: none;
+  }
+}
+
+.header__icons-bar-desktop {
+  display: none;
+  list-style-type: none;
+}
+
+@media (min-width: 980px) {
+  .header__icons-bar-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -271,6 +389,49 @@ body {
 @media (min-width: 980px) {
   .header__nav {
     display: block;
+  }
+}
+
+.header__nav-menu {
+  display: none;
+}
+
+@media (min-width: 980px) {
+  .header__nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: strech;
+        -ms-flex-align: strech;
+            align-items: strech;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px;
+  }
+}
+
+.header__item-menu, .header__item-menu--active {
+  display: none;
+}
+
+@media (min-width: 980px) {
+  .header__item-menu, .header__item-menu--active {
+    display: block;
+    margin: 30px;
+  }
+}
+
+@media (min-width: 980px) {
+  .header__item-menu--active {
+    color: red;
   }
 }
 

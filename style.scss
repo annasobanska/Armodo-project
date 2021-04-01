@@ -39,14 +39,57 @@ body{
 
     &__nav-bar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        padding: 20px;
+        @media(min-width: $width-desktop){
+            justify-content: space-around;
+        }
+    }
+
+    &__logo {
+        @include flex-center(row, left);
+        @media(min-width: $width-desktop){
+            @include flex-center(row, center);
+        }
+    }
+
+    &__logo-icon {
+        width: 80%;
     }
 
     &__search-bar {
         display: none;
         @media(min-width: $width-desktop){
-            display: block;
+            @include flex-center(row, center);
+        }
+    }
+
+    &__search {
+        border: 0;
+        border-bottom: 1px solid $text-color;
+        width: 20vw;
+    }
+
+    &__search-icon {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    &__icons-bar {
+        @include flex-center(row, center);
+        justify-content: space-around;
+        list-style-type: none;
+        @media(min-width: $width-desktop){
+            display: none;
+        }
+    }
+
+    &__icons-bar-desktop {
+        display: none;
+        list-style-type: none;
+        @media(min-width: $width-desktop){
+            @include flex-center(row, center);
         }
     }
 
@@ -54,6 +97,30 @@ body{
         display: none;
         @media(min-width: $width-desktop){
             display: block;
+        }
+    }
+ 
+    &__nav-menu{
+        display: none;
+        @media(min-width: $width-desktop){
+            @include flex-center(row, strech);
+            @include menu-link-style;
+            padding: 20px;
+        }
+    }
+  
+    &__item-menu{
+        display: none;
+        @media(min-width: $width-desktop){
+            display: block;
+            margin: 30px;
+        }
+    }
+
+    &__item-menu--active{
+        @extend .header__item-menu;
+        @media(min-width: $width-desktop){
+            color: red;
         }
     }
 }
